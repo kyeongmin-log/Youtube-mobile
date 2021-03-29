@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Youtube Mobile</title>
     <script src="https://kit.fontawesome.com/21dd925bf1.js" crossorigin="anonymous"></script>
 </head>
@@ -20,88 +21,116 @@
     </nav>
 
     <div class="video-player">
-        <video controls width="250">
+        <video controls width="100%">
             <source src="./video/coffeeAndWoman.mp4"
                     type="video/mp4">
             Sorry, your browser doesn't support embedded videos.
         </video>
     </div>
 
-    <div class="title">
-        <div class="title-hash-tag">
+    <div class="video-datas">
+        <div class="video-hash-tag">
             <a href="#">#Coffee</a>
             <a href="#">#Woman</a>
             <a href="#">#bright</a>
         </div>
-        <div class="title-info"></div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, eveniet.</p>
-            <a href="#" class="title-icon">
+        <div class="video-info">
+            <p class="videio-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, nostrum unde! Magnam nulla itaque recusandae consequuntur alias sit excepturi, repellat doloremque, neque iusto ducimus voluptates sed quia minus. Iure, obcaecati!</p>
+            <a href="#" class="video-title-icon">
                 <i class="fas fa-sort-down"></i>
             </a>
         </div>
-        <div class="title-data">
+        <div class="video-views-and-date">
             <span>1M views</span>
             <span>1 month ago</span>
         </div>
+        <div class="video-menu">
+            <div>
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <span>1K</span>
+            </div>
+            <div>
+                <a href="#"><i class="fas fa-thumbs-down"></i></a>
+                <span>0</span>
+            </div>
+            <div>
+                <a href="#"><i class="fas fa-share"></i></a>
+                <span>Share</span>
+            </div>
+            <div>
+                <a href="#"><i class="fas fa-plus"></i></a>
+                <span>Save</span>
+            </div>
+            <div>
+                <a href="#"><i class="fas fa-flag"></i></a>
+                <span>Report</span>
+            </div>
+        </div>
+        <hr>
+        <div class="video-channel-owner">
+            <div class="video-channel-owner-info">
+                <div class="video-channel-owner-img">
+                    <img src="./images/owner-img.jfif" alt="owner-img">
+                </div>
+                <div class="video-channel-owner-info-data">
+                    <p class="video-channel-owner-name"><b>경민코딩 by 경민</b></p>
+                    <p class="video-channel-owner-susubscribers">1M subscribers</p>
+                </div>    
+            </div>
+            <div class="video-channel-subscribebtn">
+                <a href="#">SUBSCRIBE</a>
+            </div>
+        </div>
+        <hr>
     </div>
-    <div class="menu">
-        <div>
-            <i class="fas fa-thumbs-up"></i>
-            <span>1K</span>
-        </div>
-        <div>
-            <i class="fas fa-thumbs-down"></i>
-            <span>0</span>
-        </div>
-        <div>
-            <i class="fas fa-share"></i>
-            <span>Share</span>
-        </div>
-        <div>
-            <i class="fas fa-plus"></i>
-            <span>Save</span>
-        </div>
-        <div>
-            <i class="fas fa-flag"></i>
-            <span>Report</span>
-        </div>
-    </div>
-    <div class="owner">
-        <div class="owner-img">
-            <img src="./images/owner-img.jfif" alt="owner-img">
-        </div>
-        <div class="owner-name">
-            <p>경민코딩 by 경민</p>
-            <p>1M subscribers</p>
-        </div>
-        <div class="subscribebtn">
-            <a href="#">SUBSCRIBE</a>
-        </div>
-    </div>
-    <div class="list">
-        <p class="list-descrition">Up next</p>
-        <div class="list-datas">
-            <div class="list-data1">
-                <img src="./images/test-img.jpg" alt="">
-                <p>data1</p>
+    <div class="video-list">
+        <p class="video-list-descrition">Up next</p>
+        <div class="video-list-datas">
+            <div class="video-list-data">
+                <div class="video-list-data-img">
+                    <img src="./images/test-img.jpg" alt="">
+                </div>
+                <div class="video-list-data-info">
+                    <div class="video-list-data-info-title">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, nostrum unde!</p>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div class="video-list-data-info-datas">
+                        <p class="video-list-data-owner-name">경민코딩 by 경민</p>
+                        <p class="video-list-data-views">1M subscribers</p>
+                    </div>
+                </div>
             </div>
-            <div class="list-data2">
-                <img src="./images/test-img.jpg" alt="">
-                <p>data2</p>
+            <div class="video-list-data">
+                <div class="video-list-data-img">
+                    <img src="./images/test-img.jpg" alt="">
+                </div>
+                <div class="video-list-data-info">
+                    <div class="video-list-data-info-title">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, nostrum unde!</p>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div class="video-list-data-info-datas">
+                        <p class="video-list-data-owner-name">경민코딩 by 경민</p>
+                        <p class="video-list-data-views">1M subscribers</p>
+                    </div>
+                </div>
             </div>
-            <div class="list-data3">
-                <img src="./images/test-img.jpg" alt="">
-                <p>data3</p>
+            <div class="video-list-data">
+                <div class="video-list-data-img">
+                    <img src="./images/test-img.jpg" alt="">
+                </div>
+                <div class="video-list-data-info">
+                    <div class="video-list-data-info-title">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, nostrum unde!</p>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div class="video-list-data-info-datas">
+                        <p class="video-list-data-owner-name">경민코딩 by 경민</p>
+                        <p class="video-list-data-views">1M subscribers</p>
+                    </div>
+                </div>
             </div>
-            <div class="list-data4">
-                <img src="./images/test-img.jpg" alt="">
-                <p>data4</p>
-            </div>
-            <div class="list-data5">
-                <img src="./images/test-img.jpg" alt="">
-                <p>data5</p>
-            </div>
-            
         </div>
     </div>
 </body>
