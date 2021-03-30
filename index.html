@@ -5,133 +5,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Youtube Mobile</title>
     <script src="https://kit.fontawesome.com/21dd925bf1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="nav-bar">
-        <div class="nav-logo">
+    <!-- Header -->
+    <header>
+        <div class="logo">
             <i class="fab fa-youtube"></i>
             <a href="#">Youtube</a>
         </div>
-        <div class="nav-icon">
+        <div class="icon">
             <i class="fas fa-search"></i>
             <i class="fas fa-ellipsis-v"></i>
         </div>
-    </nav>
+    </header>
 
-    <div class="video-player">
-        <video controls width="100%">
-            <source src="./video/coffeeAndWoman.mp4"
-                    type="video/mp4">
-            Sorry, your browser doesn't support embedded videos.
-        </video>
-    </div>
+    <!-- Video -->
+    <section class="player">
+        <video controls><source src="./video/coffeeAndWoman.mp4"type="video/mp4"></video>
+    </section>
+    
+    <div class="infoAndUpNext">
+        <!-- Meta Data -->
+        <section class="info">
+            <ul class="hashtag">
+                <li>#Woman</li>
+                <li>#Coffee</li>
+                <li>#bright</li>
+            </ul>
+            <div class="titleAndMoreBtn">
+                <span class="title">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error laborum officia eius nesciunt praesentium maiores animi quaerat? Illo commodi voluptate velit recusandae reprehenderit, excepturi atque ratione eaque iste accusantium eveniet!
+                </span>
+                <button class="moreBtn">
+                    <i class="fas fa-sort-down"></i>
+                </button>
+            </div>
+            <span class="views">1M views 1 month ago</span>
+            <ul class="actionBtn">
+                <li class="iconAndText"><button class="icon clicked"><i class="fas fa-thumbs-up"></i></button><span class="btnText">1K</span></li>
+                <li class="iconAndText"><button class="icon"><i class="fas fa-thumbs-down"></i></button><span class="btnText">0</span></li>
+                <li class="iconAndText"><button class="icon"><i class="fas fa-share"></i></button><span class="btnText">Share</span></li>
+                <li class="iconAndText"><button class="icon"><i class="fas fa-plus"></i></button><span class="btnText">Save</span></li>
+                <li class="iconAndText"><button class="icon"><i class="fas fa-flag"></i></button><span class="btnText">Report</span></li>
+            </ul>
+            <div class="channel">
+                <div class="info">
+                    <div class="img">
+                        <img src="./images/avatar.jfif" alt="">
+                    </div>
+                    <div class="nameAndSubscribers">
+                        <span class="name">경민코딩 by 경민</span>
+                        <span class="subscribers">1M subscribers</span>
+                    </div>
+                </div>
+                <button class="subscribe">subscribe</button>
+            </div>
+        </section>
 
-    <div class="video-datas">
-        <div class="video-hash-tag">
-            <a href="#">#Coffee</a>
-            <a href="#">#Woman</a>
-            <a href="#">#bright</a>
-        </div>
-        <div class="video-info">
-            <p class="videio-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, nostrum unde! Magnam nulla itaque recusandae consequuntur alias sit excepturi, repellat doloremque, neque iusto ducimus voluptates sed quia minus. Iure, obcaecati!</p>
-            <a href="#" class="video-title-icon">
-                <i class="fas fa-sort-down"></i>
-            </a>
-        </div>
-        <div class="video-views-and-date">
-            <span>1M views</span>
-            <span>1 month ago</span>
-        </div>
-        <div class="video-menu">
-            <div>
-                <a href="#"><i class="fas fa-thumbs-up"></i></a>
-                <span>1K</span>
-            </div>
-            <div>
-                <a href="#"><i class="fas fa-thumbs-down"></i></a>
-                <span>0</span>
-            </div>
-            <div>
-                <a href="#"><i class="fas fa-share"></i></a>
-                <span>Share</span>
-            </div>
-            <div>
-                <a href="#"><i class="fas fa-plus"></i></a>
-                <span>Save</span>
-            </div>
-            <div>
-                <a href="#"><i class="fas fa-flag"></i></a>
-                <span>Report</span>
-            </div>
-        </div>
-        <hr>
-        <div class="video-channel-owner">
-            <div class="video-channel-owner-info">
-                <div class="video-channel-owner-img">
-                    <img src="./images/owner-img.jfif" alt="owner-img">
-                </div>
-                <div class="video-channel-owner-info-data">
-                    <p class="video-channel-owner-name"><b>경민코딩 by 경민</b></p>
-                    <p class="video-channel-owner-susubscribers">1M subscribers</p>
-                </div>    
-            </div>
-            <div class="video-channel-subscribebtn">
-                <a href="#">SUBSCRIBE</a>
-            </div>
-        </div>
-        <hr>
+        <!-- Up Next -->
+        <section class="upNext">
+            <div class="title">Up next</div>
+            <ul class="playList">
+                <li class="item">
+                    <div class="img">
+                        <img src="./images/test-img.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eius rerum quibusdam nam magnam labore numquam distinctio voluptate aspernatur perferendis?</div>
+                        <div class="name">경민코딩 by 경민</div>
+                        <div class="views">1M subscribers</div>
+                    </div>
+                    <div class="moreBtn"><i class="fas fa-ellipsis-v"></i></div>
+                </li>
+                <li class="item">
+                    <div class="img">
+                        <img src="./images/test-img.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eius rerum quibusdam nam magnam labore numquam distinctio voluptate aspernatur perferendis?</div>
+                        <div class="name">경민코딩 by 경민</div>
+                        <div class="views">1M subscribers</div>
+                    </div>
+                    <div class="moreBtn"><i class="fas fa-ellipsis-v"></i></div>
+                </li>
+                <li class="item">
+                    <div class="img">
+                        <img src="./images/test-img.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eius rerum quibusdam nam magnam labore numquam distinctio voluptate aspernatur perferendis?</div>
+                        <div class="name">경민코딩 by 경민</div>
+                        <div class="views">1M subscribers</div>
+                    </div>
+                    <div class="moreBtn"><i class="fas fa-ellipsis-v"></i></div>
+                </li>
+            </ul>
+        </section>
     </div>
-    <div class="video-list">
-        <p class="video-list-descrition">Up next</p>
-        <div class="video-list-datas">
-            <div class="video-list-data">
-                <div class="video-list-data-img">
-                    <img src="./images/test-img.jpg" alt="">
-                </div>
-                <div class="video-list-data-info">
-                    <div class="video-list-data-info-title">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, nostrum unde!</p>
-                        <i class="fas fa-ellipsis-v"></i>
-                    </div>
-                    <div class="video-list-data-info-datas">
-                        <p class="video-list-data-owner-name">경민코딩 by 경민</p>
-                        <p class="video-list-data-views">1M subscribers</p>
-                    </div>
-                </div>
-            </div>
-            <div class="video-list-data">
-                <div class="video-list-data-img">
-                    <img src="./images/test-img.jpg" alt="">
-                </div>
-                <div class="video-list-data-info">
-                    <div class="video-list-data-info-title">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, nostrum unde!</p>
-                        <i class="fas fa-ellipsis-v"></i>
-                    </div>
-                    <div class="video-list-data-info-datas">
-                        <p class="video-list-data-owner-name">경민코딩 by 경민</p>
-                        <p class="video-list-data-views">1M subscribers</p>
-                    </div>
-                </div>
-            </div>
-            <div class="video-list-data">
-                <div class="video-list-data-img">
-                    <img src="./images/test-img.jpg" alt="">
-                </div>
-                <div class="video-list-data-info">
-                    <div class="video-list-data-info-title">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, nostrum unde!</p>
-                        <i class="fas fa-ellipsis-v"></i>
-                    </div>
-                    <div class="video-list-data-info-datas">
-                        <p class="video-list-data-owner-name">경민코딩 by 경민</p>
-                        <p class="video-list-data-views">1M subscribers</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </body>
 </html>
