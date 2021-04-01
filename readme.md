@@ -16,13 +16,13 @@
 
 ## 결과물
 
-### [ Small ]
+### [ 작은 화면 ]
 
-![img](./images/third_result_mobile.PNG)
+![img](./images/fourth_result_small.PNG)
 
-### [ Large ]
+### [ 큰 화면 ]
 
-![img](./images/third_result_pc.PNG)
+![img](./images/fourth_result_large.PNG)
 
 ## 코딩 순서 및 문제
 
@@ -72,4 +72,15 @@
 
 ### 4. 강의 영상을 다시 한번 보고 난 후 코딩(제한시간 : 2시간)
 
-    - 진행 예정.
+    [해결]
+    - 시간 부족으로 js를 적용하지 못했다.
+    - morebtn에 애니메이션을 적용하지 못했다.
+        > .info .metadata .title에 js 및 애니메이션 적용
+
+    - 좋아요 액션버튼을 파란색으로 바꾸지 못했다.
+        > 클래스명에 clicked 들어가면 파란색으로 바뀌도록 코딩
+
+    [+]
+    - 전체적인 레이아웃을 강의에서 나온 것을 적극 활용하여 코딩하였다.
+        > div, span을 최대한 적절하게 사용
+        > flex를 이용한 레이아웃 정의
