@@ -18,11 +18,11 @@
 
 ### [ 작은 화면 ]
 
-![img](./images/fourth_result_small.PNG)
+![img](./images/fourth_result_small.png)
 
 ### [ 큰 화면 ]
 
-![img](./images/fourth_result_large.PNG)
+![img](./images/fourth_result_large.png)
 
 ## 코딩 순서 및 문제
 
