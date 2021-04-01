@@ -9,13 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Youtube Mobile</title>
     <script src="https://kit.fontawesome.com/21dd925bf1.js" crossorigin="anonymous"></script>
+    <script src="./main.js" defer></script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="logo">
             <i class="fab fa-youtube"></i>
-            <a href="#">Youtube</a>
+            <span class="title">Youtube</span>
         </div>
         <div class="icon">
             <i class="fas fa-search"></i>
@@ -23,89 +24,94 @@
         </div>
     </header>
 
-    <!-- Video -->
+    <!-- Video Player -->
     <section class="player">
         <video controls><source src="./video/coffeeAndWoman.mp4"type="video/mp4"></video>
     </section>
-    
+
     <div class="infoAndUpNext">
-        <!-- Meta Data -->
+        <!-- Metadata -->
         <section class="info">
-            <ul class="hashtag">
-                <li>#Woman</li>
-                <li>#Coffee</li>
-                <li>#bright</li>
-            </ul>
-            <div class="titleAndMoreBtn">
-                <span class="title">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error laborum officia eius nesciunt praesentium maiores animi quaerat? Illo commodi voluptate velit recusandae reprehenderit, excepturi atque ratione eaque iste accusantium eveniet!
-                </span>
-                <button class="moreBtn">
-                    <i class="fas fa-sort-down"></i>
-                </button>
+            <div class="metadata">
+                <div class="hashtag">
+                    <ul>
+                        <li>#Woman</li>
+                        <li>#Coffee</li>
+                        <li>#Bright</li>
+                    </ul>
+                </div>
+                <div class="title">
+                    <span class="text clamp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, ducimus facere quod quisquam officiis deserunt nobis esse et perspiciatis illum ipsa inventore totam atque? Eos illum accusantium sed reprehenderit aliquid.</span>
+                    <button class="morebtn"><i class="fas fa-sort-down"></i></button>
+                </div>
+                <span class="views">1M views 1 month ago</span>
             </div>
-            <span class="views">1M views 1 month ago</span>
             <ul class="actionBtn">
-                <li class="iconAndText"><button class="icon clicked"><i class="fas fa-thumbs-up"></i></button><span class="btnText">1K</span></li>
-                <li class="iconAndText"><button class="icon"><i class="fas fa-thumbs-down"></i></button><span class="btnText">0</span></li>
-                <li class="iconAndText"><button class="icon"><i class="fas fa-share"></i></button><span class="btnText">Share</span></li>
-                <li class="iconAndText"><button class="icon"><i class="fas fa-plus"></i></button><span class="btnText">Save</span></li>
-                <li class="iconAndText"><button class="icon"><i class="fas fa-flag"></i></button><span class="btnText">Report</span></li>
+                <li class="item"><button class="icon clicked"><i class="fas fa-thumbs-up"></i></button><span class="text">1K</span></li>
+                <li class="item"><button class="icon"><i class="fas fa-thumbs-down"></i></button><span class="text">0</span></li>
+                <li class="item"><button class="icon"><i class="fas fa-share"></i></button><span class="text">Share</span></li>
+                <li class="item"><button class="icon"><i class="fas fa-plus"></i></button><span class="text">Save</span></li>
+                <li class="item"><button class="icon"><i class="fas fa-flag"></i></button><span class="text">Report</span></li>
             </ul>
             <div class="channel">
-                <div class="info">
-                    <div class="img">
-                        <img src="./images/avatar.jfif" alt="">
-                    </div>
-                    <div class="nameAndSubscribers">
+                <div class="metadata">
+                    <div class="img"><img src="./images/avatar.jfif" alt=""></div>
+                    <div class="info">
                         <span class="name">경민코딩 by 경민</span>
                         <span class="subscribers">1M subscribers</span>
                     </div>
                 </div>
-                <button class="subscribe">subscribe</button>
+                <button class="subscribeBtn">subscribe</button>
             </div>
         </section>
 
         <!-- Up Next -->
         <section class="upNext">
             <div class="title">Up next</div>
-            <ul class="playList">
-                <li class="item">
-                    <div class="img">
-                        <img src="./images/test-img.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        <div class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eius rerum quibusdam nam magnam labore numquam distinctio voluptate aspernatur perferendis?</div>
-                        <div class="name">경민코딩 by 경민</div>
-                        <div class="views">1M subscribers</div>
-                    </div>
-                    <div class="moreBtn"><i class="fas fa-ellipsis-v"></i></div>
-                </li>
-                <li class="item">
-                    <div class="img">
-                        <img src="./images/test-img.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        <div class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eius rerum quibusdam nam magnam labore numquam distinctio voluptate aspernatur perferendis?</div>
-                        <div class="name">경민코딩 by 경민</div>
-                        <div class="views">1M subscribers</div>
-                    </div>
-                    <div class="moreBtn"><i class="fas fa-ellipsis-v"></i></div>
-                </li>
-                <li class="item">
-                    <div class="img">
-                        <img src="./images/test-img.jpg" alt="">
-                    </div>
-                    <div class="info">
-                        <div class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eius rerum quibusdam nam magnam labore numquam distinctio voluptate aspernatur perferendis?</div>
-                        <div class="name">경민코딩 by 경민</div>
-                        <div class="views">1M subscribers</div>
-                    </div>
-                    <div class="moreBtn"><i class="fas fa-ellipsis-v"></i></div>
-                </li>
-            </ul>
+            <div class="metadata">
+                <ul>
+                    <li class="item">
+                        <div class="img">
+                            <img src="./images/test-img.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <span class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur excepturi accusantium culpa sunt, cupiditate eveniet commodi impedit quos quo incidunt.</span>
+                            <span class="name">경민코딩 by 경민</span>
+                            <span class="views">82K views</span>
+                        </div>
+                        <div class="morebtn">
+                            <button class="morebtn"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="img">
+                            <img src="./images/test-img.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <span class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur excepturi accusantium culpa sunt, cupiditate eveniet commodi impedit quos quo incidunt.</span>
+                            <span class="name">경민코딩 by 경민</span>
+                            <span class="views">82K views</span>
+                        </div>
+                        <div class="morebtn">
+                            <button class="morebtn"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="img">
+                            <img src="./images/test-img.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <span class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur excepturi accusantium culpa sunt, cupiditate eveniet commodi impedit quos quo incidunt.</span>
+                            <span class="name">경민코딩 by 경민</span>
+                            <span class="views">82K views</span>
+                        </div>
+                        <div class="morebtn">
+                            <button class="morebtn"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
     </div>
-    
 </body>
 </html>

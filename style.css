@@ -1,6 +1,6 @@
 :root {
   /* Color */
-  --background-color: #130700;
+  --color-black: #130700;
   --color-red: #ff0000;
   --color-white: #f9f9f9;
   --color-blue: #065fd4;
@@ -8,12 +8,13 @@
   --color-light-grey: #ececec;
   /* Size */
   --padding: 12px;
+  --margin: 12px;
+  --avatar-size: 36px;
   /* Font Size */
-  --font-very-large: 18px;
-  --font-large: 14px;
-  --font-medium: 12px;
-  --font-small: 10px;
-  --font-very-small: 8px;
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
 }
 
 * {
@@ -26,107 +27,128 @@ body {
   font-family: "Roboto";
 }
 
-a {
-  text-decoration: none;
-  color: var(--color-white);
-}
-
 ul {
   list-style: none;
 }
 
-button {
-  background: transparent;
+button,
+button:focus {
   outline: none;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 /* Header */
 header {
   display: flex;
-  background-color: var(--background-color);
-  color: var(--color-white);
   justify-content: space-between;
   padding: var(--padding);
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+header .logo {
+  font-size: var(--font-large);
 }
 
 header .logo i {
   color: var(--color-red);
-  font-size: var(--font-very-large);
 }
 
 header .icon .fa-search {
-  padding-right: var(--padding);
+  margin-right: var(--margin);
 }
 
-/* Video */
+/* Video Player */
 .player {
-  text-align: center;
-  background-color: var(--background-color);
   position: sticky;
   top: 0;
+  text-align: center;
+  background-color: var(--color-black);
+  margin-bottom: var(--margin);
 }
 
 .player video {
-  outline: none;
   width: 100%;
   height: 100%;
   max-width: 1000px;
 }
 
 /* info */
-.info {
-  padding: var(--padding);
+.infoAndUpNext > .info {
+  padding: 0 var(--padding);
 }
 
-.hashtag {
+.info .metadata .hashtag {
+  margin-bottom: calc(var(--margin) / 2);
+}
+
+.info .metadata .hashtag ul {
   display: flex;
 }
 
-.hashtag li {
+.info .metadata .hashtag li {
+  font-size: var(--font-small);
   color: var(--color-blue);
-  font-size: var(--font-large);
-  margin-right: var(--padding);
+  margin-right: var(--margin);
 }
 
-.titleAndMoreBtn {
+.info .metadata .title {
   display: flex;
   justify-content: space-between;
+  margin-bottom: calc(var(--margin) / 2);
 }
 
-.titleAndMoreBtn .title {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  margin-right: calc(var(--padding) / 2);
-}
-
-.titleAndMoreBtn .moreBtn {
-  height: 100%;
-}
-
-.info .views {
+.info .metadata .title .text {
   font-size: var(--font-medium);
+  display: -webkit-box;
+}
+
+.info .metadata .title .text.clamp {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-right: var(--margin);
+}
+
+.info .metadata .title .morebtn {
+  height: 100%;
+  transition: transform 300ms ease-in-out;
+}
+
+.info .metadata .title .morebtn.clicked {
+  transform: rotate(180deg);
+}
+
+.info .metadata .views {
+  font-size: small;
   color: var(--color-dark-grey);
 }
 
-.info .actionBtn {
+.actionBtn {
+  margin-top: var(--margin);
   display: flex;
   justify-content: space-around;
+  margin-bottom: var(--margin);
 }
 
-.info .actionBtn .iconAndText {
+.actionBtn .item {
   display: flex;
   flex-direction: column;
-  padding: var(--padding);
 }
 
-.info .actionBtn .iconAndText i {
-  font-size: var(--font-very-large);
-  color: var(--color-dark-grey);
-  margin-bottom: calc(var(--padding));
+.actionBtn .item .icon {
+  font-size: var(--font-large);
+  margin-bottom: calc(var(--margin) / 2);
+}
+
+.actionBtn .item .icon.clicked {
+  color: var(--color-blue);
+}
+
+.actionBtn .item .text {
+  font-size: var(--font-medium);
 }
 
 .channel {
@@ -136,75 +158,93 @@ header .icon .fa-search {
   border-bottom: 2px var(--color-light-grey) solid;
 }
 
-.channel .info {
+.channel .metadata {
   display: flex;
   align-items: center;
+  margin: var(--margin) 0;
 }
 
-.channel .info .nameAndSubscribers {
+.channel .metadata .img img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  margin-right: var(--margin);
+}
+
+.channel .metadata .info {
   display: flex;
   flex-direction: column;
-  padding: var(--padding);
 }
 
-.channel .info .nameAndSubscribers .subscribers {
-  font-size: var(--font-medium);
+.channel .metadata .info .subscribers {
+  font-size: var(--font-small);
   color: var(--color-dark-grey);
 }
 
-.channel .info .img img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.channel .subscribe {
+.channel .subscribeBtn {
   text-transform: uppercase;
   color: var(--color-red);
 }
 
-/* Up next */
+/* UpNext */
 .upNext {
-  padding: var(--padding);
+  padding: 0 var(--padding);
 }
 
 .upNext > .title {
-  font-size: var(--font-very-large);
+  margin: var(--margin) 0;
+  font-size: var(--font-medium);
   color: var(--color-dark-grey);
-  margin-bottom: var(--padding);
 }
 
-.upNext .playList .item {
+.upNext .metadata .item {
   display: flex;
-  margin-top: var(--padding);
+  justify-content: space-between;
+  margin-bottom: var(--margin);
 }
 
-.upNext .playList .item .info {
-  height: 100%;
-  padding: 0px;
-  padding-left: var(--padding);
+.upNext .metadata .item .img img {
+  width: 100%;
 }
 
-.upNext .playList .item .info .name {
+.upNext .metadata .item .img {
+  flex: 1 1 30%;
+  margin-right: var(--margin);
+}
+
+.upNext .metadata .item .info {
+  flex: 1 1 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.upNext .metadata .item .info .title {
+  font-size: var(--font-medium);
+}
+.upNext .metadata .item .info .name {
+  font-size: var(--font-small);
   color: var(--color-dark-grey);
-  font-size: var(--font-large);
+}
+.upNext .metadata .item .info .views {
+  font-size: var(--font-small);
+  color: var(--color-dark-grey);
 }
 
-.upNext .playList .item .img img {
-  width: 200px;
+.upNext .metadata .item .morebtn {
+  flex: 1 1 5%;
 }
 
-.upNext .playList .item .info .title {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.infoAndUpNext {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
   .infoAndUpNext {
-    display: flex;
+    margin-top: var(--margin);
+    flex-direction: row;
   }
+
   .player {
     position: initial;
   }
